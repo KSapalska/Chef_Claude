@@ -47,14 +47,14 @@ import React from "react"
 
 export default function App() {
   
-  const result = React.useState("yes")
+  const [result,func] = React.useState("yes")
   console.log(result)
   
   
   return (
       <main>
           <h1 className="title">Is state important to know?</h1>
-          <button className="value">{result[0]}</button>
+          <button className="value">{result}</button>
       </main>
   )
 }
