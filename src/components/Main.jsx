@@ -21,11 +21,12 @@
         ))
     
         function handleSubmit(event) {
-            event.preventDefault()
+            event.preventDefault()   
             console.log("Form submitted!")
             const formData = new FormData(event.currentTarget)
             const newIngredient = formData.get("ingredient")
-            console.log(newIngredient)
+            ingredients.push(newIngredient)
+            console.log(ingredients)
         }
         
         return (
