@@ -47,14 +47,18 @@ import React from "react"
 
 export default function App() {
   
-  const [result,func] = React.useState("yes")
-  console.log(result)
+  let [isImportant,setIsImportant] = React.useState("yes")
+  
+  function handleClick(){
+    setIsImportant("Definitely!")
+  }
+  
   
   
   return (
       <main>
           <h1 className="title">Is state important to know?</h1>
-          <button className="value">{result}</button>
+          <button onClick={handleClick} className="value">{isImportant}</button>
       </main>
   )
 }
