@@ -43,7 +43,7 @@ function App() {
 export default App */
  
 
-import React from "react"
+/* import React from "react"
 
 export default function App() {
   
@@ -61,4 +61,33 @@ export default function App() {
           <button onClick={handleClick} className="value">{isImportant}</button>
       </main>
   )
+} */
+
+
+import React from "react"
+
+export default function App() {
+    
+    const [counter,setCounter] = React.useState(0)
+  
+    function increment() {
+      setCounter(counter + 1);
+  }
+
+  function decrement() {
+      setCounter(counter - 1);
+  }
+
+
+
+    return (
+        <main className="container">
+            <h1>How many times will Bob say "state" in this section?</h1>
+            <div className="counter">
+                <button onClick={decrement} className="minus" aria-label="Decrease count">–</button>
+                <h2 className="count">{counter}</h2>
+                <button onClick= {increment} className="plus" aria-label="Increase count">+</button>
+            </div>
+        </main>
+    )
 }
