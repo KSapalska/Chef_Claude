@@ -71,11 +71,11 @@ export default function App() {
     const [counter,setCounter] = React.useState(0)
   
     function increment() {
-      setCounter(counter + 1);
+      setCounter(prevCount=> prevCount + 1);
   }
 
   function decrement() {
-      setCounter(counter - 1);
+      setCounter(prevCount=> prevCount - 1;
   }
 
 
