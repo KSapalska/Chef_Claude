@@ -64,30 +64,20 @@ export default function App() {
 } */
 
 
-import React from "react"
-
-export default function App() {
+  export default function App() {
+    /**
+     * Challenge: Replace the if/else below with a ternary
+     * to determine the text that should display on the page
+     */
+    const isGoingOut = false
     
-    const [counter,setCounter] = React.useState(0)
-  
-    function increment() {
-      setCounter(prevCount=> prevCount + 1);
-  }
-
-  function decrement() {
-      setCounter(prevCount=> prevCount - 1;
-  }
-
-
-
+    
+    
+    
     return (
-        <main className="container">
-            <h1>How many times will Bob say "state" in this section?</h1>
-            <div className="counter">
-                <button onClick={decrement} className="minus" aria-label="Decrease count">–</button>
-                <h2 className="count">{counter}</h2>
-                <button onClick= {increment} className="plus" aria-label="Increase count">+</button>
-            </div>
+        <main>
+            <h1 className="title">Do I feel like going out tonight?</h1>
+            <button className="value">{ isGoingOut ?   "Yes": "No"}</button>
         </main>
     )
 }
