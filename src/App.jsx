@@ -1,46 +1,16 @@
-/* 
-function App() {
-  
-  function handleClick() {
-    console.log("I was clicked!")
-  }
-  
-  function handleMouseOver() {
-    console.log("I was Mause over!")
-  }
- 
-  
-  return (
-    <main className="container">
-      <img
-        src="https://picsum.photos/640/360"
-        alt="Placeholder image from Picsum"
-        onMouseDown={handleMouseOver}
-      />
-      <button onClick={handleClick}>Click me</button>
-    </main>
-  )
-}
-
-
-
-export default App */
-
-/*  import Header from "./components/Header.jsx"
+/* import Header from "./components/Header.jsx"
 import Main from "./components/Main.jsx"
 
-function App() {
-  
 
+
+export default function App() {
   return (
     <>
-       <Header />
-       <Main />
+      <Header />
+      <Main />
     </>
   )
-}
-
-export default App */
+} */
 
 /* import React from "react"
 
@@ -85,7 +55,7 @@ export default function App() {
 }
  */
 
-import React from "react";
+/* import React from "react";
 
 export default function App() {
   let [myFavoriteThings, setMyFavoriteThings] = React.useState([]);
@@ -113,6 +83,65 @@ export default function App() {
     <main>
       <button onClick={addFavoriteThing}>Add item</button>
       <section aria-live="polite">{thingsElements}</section>
+    </main>
+  );
+} */
+
+import React from "react";
+import avatar from "./img/chef.png";
+import starFilled from "./img/star-filled.png";
+import starEmpty from "./img/star-empty.png";
+
+export default function App() {
+  const [contact, setContact] = React.useState({
+    firstName: "John",
+    lastName: "Doe",
+    phone: "+1 (212) 555-1212",
+    email: "itsmyrealname@example.com",
+    isFavorite: false,
+  });
+  let starIcon = contact.isFavorite ? starFilled : starEmpty;
+
+  function toggleFavorite() {
+    setContact(prevContact => ({
+      ...prevContact,
+      isFavorite: !prevContact.isFavorite
+    })
+
+
+    )
+  }
+
+  return (
+    <main>
+      <article className="card">
+        <img
+          src={avatar}
+          className="avatar"
+          alt="User profile picture of John Doe"
+        />
+        <div className="info">
+          <button
+            onClick={toggleFavorite}
+            aria-pressed={contact.isFavorite}
+            aria-label={
+              contact.isFavorite ? "Remove from favorites" : "Add to favorites"
+            }
+            className="favorite-button"
+          >
+            <img
+              src={starIcon}
+              alt={contact.isFavorite ? "Filled star icon" : "Empty star icon"}
+              className="favorite"
+            />
+          </button>
+          <h2 className="name">
+            {contact.firstName} {contact.lastName}
+          </h2>
+          <p className="contact">{contact.phone}</p>
+          <p className="contact">{contact.email}</p>
+        </div>
+      </article>
     </main>
   );
 }

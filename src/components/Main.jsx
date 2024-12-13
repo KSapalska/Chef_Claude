@@ -1,32 +1,22 @@
-/* export default function Main(){
+import React from "react"
 
-    return (
-        <main>
-            <form className="add-ingredient-form">
-                <input 
-                    type ="text"
-                    placeholder="e.g. oregano"
-                    aria-label="Add ingredient"/>
-                <button>Add ingredient</button>
-            </form>
-        </main>
-    )
-} */
-
-    export default function Main() {
-        const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+export default function Main() {
+        const [ingredients,setIngrediets] = React.useState([])
         
+
         const ingredientsListItems = ingredients.map(ingredient => (
             <li key={ingredient}>{ingredient}</li>
         ))
     
         function handleSubmit(event) {
+            
             event.preventDefault()   
-            console.log("Form submitted!")
+           
             const formData = new FormData(event.currentTarget)
             const newIngredient = formData.get("ingredient")
-            ingredients.push(newIngredient)
-            console.log(ingredients)
+            setIngrediets(prevIngridients =>[...prevIngridients,newIngredient])
+
+
         }
         
         return (
