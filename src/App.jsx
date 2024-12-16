@@ -150,30 +150,22 @@ export default function App() {
 
  */
 
-
-
-
-
-
-
-
-export default function App() {
+/* export default function App() {
   
-  function handleSubmit(event) {
-    event.preventDefault()
-    const formElement = event.currentTarget 
-    const formData = new FormData(formElement)
+  function signUp(formData) {
+    
+   
     const email= formData.get("email")
     const password = formData.get("password")
 
     console.log(email, password)
-    formElement.reset()
+   
   }
   
   return (
     <section>
       <h1>Signup form</h1>
-      <form onSubmit={handleSubmit} method="post">
+      <form action={signUp}>
         <label htmlFor="email">Email:</label>
         <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
         <br />
@@ -187,4 +179,42 @@ export default function App() {
       </form>
     </section>
   )
+} */
+
+  import React from "react"
+
+export default function Main() {
+
+    const [ingredients, setIngredients] = React.useState([])
+
+    const ingredientsListItems = ingredients.map(ingredient => (
+        <li key={ingredient}>{ingredient}</li>
+    ))
+
+    function addIngredient(event) {
+         event.preventDefault()
+         const formElements = event.currentTarget
+         const formData = new FormData(formElements)
+        
+        const newIngredient = formData.get("ingredient")
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+        formElements.reset()
+    }
+
+    return ( 
+        <main>
+            <form onSubmit={addIngredient} className="add-ingredient-form">
+                <input
+                    type="text"
+                    placeholder="e.g. oregano"
+                    aria-label="Add ingredient"
+                    name="ingredient"
+                />
+                <button>Add ingredient</button>
+            </form>
+            <ul>
+                {ingredientsListItems}
+            </ul>
+        </main>
+    )
 }
