@@ -106,6 +106,12 @@ input{
     border: 1px solid #0D9488;
 }
 
+fieldset {
+    border: 1px solid #262626;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
 button{
     border-radius: 100px;
     padding: 10px 30px;
@@ -120,3 +126,23 @@ button:hover {
     border-color: #042F2E;
     color: white;
 }
+
+textarea {
+    border-radius: 10px;
+    border: 1px solid #0D9488;
+    padding: 10px;
+    margin-top: 10px; }
+
+    legend {
+        padding: 0 10px;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
