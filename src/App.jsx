@@ -161,7 +161,13 @@ export default function App() {
   
   function handleSubmit(event) {
     event.preventDefault()
-    console.log("Submitted")
+    const formElement = event.currentTarget 
+    const formData = new FormData(formElement)
+    const email= formData.get("email")
+    const password = formData.get("password")
+
+    console.log(email, password)
+    formElement.reset()
   }
   
   return (
