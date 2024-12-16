@@ -87,7 +87,7 @@ export default function App() {
   );
 } */
 
-import React from "react";
+/* import React from "react";
 import avatar from "./img/chef.png";
 import starFilled from "./img/star-filled.png";
 import starEmpty from "./img/star-empty.png";
@@ -144,4 +144,41 @@ export default function App() {
       </article>
     </main>
   );
+}
+
+
+
+ */
+
+
+
+
+
+
+
+
+export default function App() {
+  
+  function handleSubmit(event) {
+    event.preventDefault()
+    console.log("Submitted")
+  }
+  
+  return (
+    <section>
+      <h1>Signup form</h1>
+      <form onSubmit={handleSubmit} method="post">
+        <label htmlFor="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
+        <br />
+        
+        <label htmlFor="password">Password:</label>
+        <input id="password" type="password" name="password" />
+        <br />
+        
+        <button>Submit</button>
+        
+      </form>
+    </section>
+  )
 }

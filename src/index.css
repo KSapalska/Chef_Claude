@@ -80,58 +80,43 @@ main {
 }
 
 body {
-    background-color: #0C4A6E;
+    background-color: #030f16;
     margin: 0;
     font-family: "Inter", sans-serif;
+    color: azure;
 }
 
-main {
-    height: 100vh;
+h1 {
+    text-align: center;
+}
+
+form{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    padding-inline: 40px;
 }
 
-.card {
-    background-color: white;
-    width: 200px;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    height: 350px;
+label {
+    margin-bottom: 4px;
+}
+input{
+    border-radius: 100px;
+    height: 2rem;
+    text-indent: 10px;
+    border: 1px solid #0D9488;
 }
 
-.card .avatar {
-    width: 100%;
-    padding: 10%;
-    padding-bottom: 0;
-}
-
-.card .name {
-    margin-block: 13px;
-    color: #333333;
-}
-
-.card .info {
-    padding: 10px;
-}
-
-.card .favorite {
-    width: 25px;
+button{
+    border-radius: 100px;
+    padding: 10px 30px;
+    border: 1px solid #0D9488;
+    margin-top: 10px;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
-.card .contact {
-    font-size: 0.75rem;
-    color: gray;
-    margin-block: 7px;
-}
-
-.card .favorite-button {
-    border: none;
-    background: transparent;
-}
-
-.card .favorite-button:active {
-    transform: none;
-    box-shadow: none;
+button:hover {
+    background-color: #115E59;
+    border-color: #042F2E;
+    color: white;
 }
