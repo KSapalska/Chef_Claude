@@ -182,6 +182,10 @@ export default function App() {
   return (
     <section>
       <h1>Signup form</h1>
+      <label class="switch">
+  <input type="checkbox"/>
+  <span class="slider"></span>
+</label>
       <form onSubmit={signUp} method="post">
       <label htmlFor="email">Email:</label>
         <input id="email" defaultValue="joe@schmoe.com" type="email" name="email" placeholder="joe@schmoe.com" />
