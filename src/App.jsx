@@ -1,4 +1,4 @@
-/* import Header from "./components/Header.jsx"
+import Header from "./components/Header.jsx"
 import Main from "./components/Main.jsx"
 
 
@@ -10,7 +10,7 @@ export default function App() {
       <Main />
     </>
   )
-} */
+} 
 
 /* import React from "react"
 
@@ -150,7 +150,7 @@ export default function App() {
 
  */
 
- export default function App() {
+ /* export default function App() {
   
   function signUp(event) {
     event.preventDefault()
@@ -167,7 +167,7 @@ export default function App() {
     console.log(favColor) */
     
     
-    const data = Object.fromEntries(formData)
+    /* const data = Object.fromEntries(formData)
     const dietaryRestrictions = formData.getAll("dietaryRestrictions")
     const allData = {
       ...data,
@@ -248,7 +248,7 @@ export default function App() {
     </section>
   )
 } 
-
+ */ 
 /* import React from "react"
 
 export default function Main() {
