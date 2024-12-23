@@ -12,7 +12,9 @@ export default function Main() {
 
     async function getRecipe() {
         const recipeMarkdown = await getRecipeFromChefClaude(ingredients)
-        setRecipe(recipeMarkdown)
+//        setRecipe(recipeMarkdown)
+  setRecipe(recipeText.trim());
+  setRecipeShown(true);
     }
 
     function addIngredient(formData) {
